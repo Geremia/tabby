@@ -334,6 +334,8 @@ impl DbEnum for OAuthProvider {
             OAuthProvider::Google => "google",
             OAuthProvider::Github => "github",
             OAuthProvider::Gitlab => "gitlab",
+            #[cfg(any(test, feature = "testutils"))]
+            OAuthProvider::Test => "test",
         }
     }
 
@@ -342,6 +344,8 @@ impl DbEnum for OAuthProvider {
             "github" => Ok(OAuthProvider::Github),
             "google" => Ok(OAuthProvider::Google),
             "gitlab" => Ok(OAuthProvider::Gitlab),
+            #[cfg(any(test, feature = "testutils"))]
+            "test" => Ok(OAuthProvider::Test),
             _ => bail!("Invalid OAuth credential type"),
         }
     }

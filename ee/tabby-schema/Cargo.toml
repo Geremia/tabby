@@ -7,6 +7,7 @@ homepage.workspace = true
 
 [features]
 schema-language = ["juniper/schema-language"]
+testutils = []
 
 [dependencies]
 anyhow.workspace = true

@@ -7,6 +7,7 @@ homepage.workspace = true
 
 [features]
 prod = []
+testutils = ["tabby-schema/testutils"]
 
 [dependencies]
 anyhow.workspace = true
@@ -55,6 +56,7 @@ strum.workspace = true
 assert_matches.workspace = true
 tokio = { workspace = true, features = ["macros"] }
 tabby-db = { path = "../../ee/tabby-db", features = ["testutils"] }
+tabby-schema = { path = "../../ee/tabby-schema", features = ["testutils"] }
 tabby-common = { path = "../../crates/tabby-common", features = [ "testutils" ] }
 serial_test = { workspace = true }
 temp_testdir = { workspace = true }

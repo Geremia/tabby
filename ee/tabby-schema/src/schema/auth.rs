@@ -328,6 +328,8 @@ pub enum OAuthProvider {
     Github,
     Google,
     Gitlab,
+    #[cfg(feature = "testutils")]
+    Test,
 }
 
 #[derive(GraphQLObject)]
